@@ -7,6 +7,10 @@ router.get('/servers', (req, res) => {
     methods.listServers(req,res)
 })
 
+router.get('/servers/:id', (req, res) => {
+    methods.getServerInfo(req,res)
+})
+
 router.post('/servers', (req, res) => {
     methods.createServer(req,res)
 })

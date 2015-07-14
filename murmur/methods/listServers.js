@@ -23,7 +23,6 @@ function processServer (server) {
         let serverPromises = [
             new Promise((resolve, reject) => server.id().then((id) => resolve({"id": id}))),
             new Promise((resolve, reject) => server.isRunning().then((running) => resolve({"running": running})))
-            // new Promise((resolve, reject) => server.getUsers().then((users) => resolve({"users": users.size || 0})))
         ]
         
         Promise.all(serverPromises).then((results)=> {
