@@ -1,6 +1,10 @@
+import {argv} from 'yargs'
+
 const defaults = {
     baseUrl: 'localhost',
     port: 64738
 }
 
-export default defaults
+const constants = Object.assign(defaults, argv)
+
+export default constants
