@@ -1,8 +1,9 @@
 import {argv} from 'yargs'
 
 const defaults = {
-    baseUrl: 'localhost',
-    port: 64738
+    mumblePort: 64738,
+    baseUrl: process.env.MURMUR_API_BASE_URL || 'localhost',
+    port: process.env.MURMUR_API_PORT || 4321
 }
 
 const constants = Object.assign(defaults, argv)

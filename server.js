@@ -1,4 +1,5 @@
 import express from 'express'
+import c from './constants'
 
 
 const app = express()
@@ -13,8 +14,8 @@ app.use(function (err, req, res) {
     })
 })
 
-app.set('port', 4321)
+app.set('port', c.port)
 
-var server = app.listen(4321, function () {
+var server = app.listen(c.port, function () {
 
 })
